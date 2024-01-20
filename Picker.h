@@ -67,10 +67,14 @@ public:
     }
   }
 
-  void copyLastPicks(int* destArray, int destSize) {
-    for (int i = 0; i < pickHistorySize && i < destSize; i++) {
-      destArray[i] = lastPick[i];
-    }
+  // New method to get the value of pickQuantity
+  int getPickQuantity() const {
+    return pickQuantity;
+  }
+
+  // New method to get the value of pickHistorySize
+  int getPickHistorySize() const {
+    return pickHistorySize;
   }
 
   void printPicks(Stream& s) {
